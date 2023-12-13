@@ -16,6 +16,10 @@
     padding: 0;
   }
 
+  label {
+    position: relative;
+  }
+
   [type="radio"] + div {
     cursor: pointer;
     width: 140px;
@@ -28,6 +32,33 @@
     padding: 1px;
     margin: 12px;
   }
+
+  [type="radio"] + div.mini {
+    width: 64px;
+    height: 64px;
+    margin: 16px;
+  }
+
+  .options {
+    display: flex;
+  }
+
+  div.mini > img {
+    width: 49px;
+  }
+
+  label > h1 {
+    font-family: "Just Another Hand", cursive;
+    z-index: 10;
+    position: absolute;
+    text-shadow: 0 0 6px white, 0 0 2px white, 0 0 4px white;
+  }
+
+  .options h1 {
+    font-size: 24px;
+    top: 42px;
+  }
+
   img {
     width: 140px;
   }
@@ -75,27 +106,45 @@ finalizing the order.
   <template id="laser_options">
     <div class="options">
       <label class="r">
-        <input type="radio" name="color_opt" value="laser" checked />
-        <div>
-          <img src="/images/enc_laser.png" alt="laser cut color_opt" />
+        <h1>Purple Glitter</h1>
+        <input type="radio" name="color_opt" value="purp_glitter" checked />
+        <div class="mini">
+          <img src="/images/purp_glitter.webp" alt="purple glitter" />
         </div>
       </label>
       <label class="r">
-        <input type="radio" name="color_opt" value="can" />
-        <div>
-          <img
-            src="/images/enc_can.png"
-            alt="enclosure from recycled steel can"
-          />
+        <h1>Purple Translucent</h1>
+        <input type="radio" name="color_opt" value="purp_trans" />
+        <div class="mini">
+          <img src="/images/purp_trans.avif" alt="Translucent purple" />
         </div>
       </label>
       <label class="r">
-        <input type="radio" name="color_opt" value="tin" />
-        <div>
-          <img
-            src="/images/enc_tin.png"
-            alt="enclosure from recycled steel tin"
-          />
+        <h1>Pearl</h1>
+        <input type="radio" name="color_opt" value="pearl" />
+        <div class="mini">
+          <img src="/images/pearl.avif" alt="Pearl" />
+        </div>
+      </label>
+      <label class="r">
+        <h1>Haxor</h1>
+        <input type="radio" name="color_opt" value="haxor" />
+        <div class="mini">
+          <img src="/images/haxor.avif" alt="Haxor (flourescent green)" />
+        </div>
+      </label>
+      <label class="r">
+        <h1>Smoke</h1>
+        <input type="radio" name="color_opt" value="smoke" />
+        <div class="mini">
+          <img src="/images/smoke_trans.avif" alt="Smoke (transparent black)" />
+        </div>
+      </label>
+      <label class="r">
+        <h1>Ice Cream</h1>
+        <input type="radio" name="color_opt" value="smoke" />
+        <div class="mini">
+          <img src="/images/white_trans.webp" alt="Ice cream (frosty white)" />
         </div>
       </label>
     </div>
