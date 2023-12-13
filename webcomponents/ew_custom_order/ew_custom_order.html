@@ -1,0 +1,163 @@
+<style>
+  .enclosures {
+    display: flex;
+    flex-direction: row;
+  }
+
+  [type="radio"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  [type="radio"]:checked + div {
+    border: 1px solid black;
+    padding: 0;
+  }
+
+  [type="radio"] + div {
+    cursor: pointer;
+    width: 140px;
+    height: 140px;
+    background-color: #d3d3d3;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1px;
+    margin: 12px;
+  }
+  img {
+    width: 140px;
+  }
+</style>
+
+Each Electric Whitelip pedal is currently custom-made based on available
+inventory. We will contact you to confirm your selection & pricing before
+finalizing the order.
+
+<form action="placeholder https://formspree.io/f/mnqkekln" method="POST">
+  <label>
+    Your email:
+    <input type="email" name="email" />
+  </label>
+
+  <div class="enclosures">
+    <label class="r">
+      <input type="radio" name="enclosure" value="laser" checked />
+      <div>
+        <img src="/images/enc_laser.png" alt="laser cut enclosure" />
+      </div>
+    </label>
+    <label class="r">
+      <input type="radio" name="enclosure" value="can" />
+      <div>
+        <img
+          src="/images/enc_can.png"
+          alt="enclosure from recycled steel can"
+        />
+      </div>
+    </label>
+    <label class="r">
+      <input type="radio" name="enclosure" value="tin" />
+      <div>
+        <img
+          src="/images/enc_tin.png"
+          alt="enclosure from recycled steel tin"
+        />
+      </div>
+    </label>
+  </div>
+
+  <div id="options_placeholder"></div>
+
+  <template id="laser_options">
+    <div class="options">
+      <label class="r">
+        <input type="radio" name="color_opt" value="laser" checked />
+        <div>
+          <img src="/images/enc_laser.png" alt="laser cut color_opt" />
+        </div>
+      </label>
+      <label class="r">
+        <input type="radio" name="color_opt" value="can" />
+        <div>
+          <img
+            src="/images/enc_can.png"
+            alt="enclosure from recycled steel can"
+          />
+        </div>
+      </label>
+      <label class="r">
+        <input type="radio" name="color_opt" value="tin" />
+        <div>
+          <img
+            src="/images/enc_tin.png"
+            alt="enclosure from recycled steel tin"
+          />
+        </div>
+      </label>
+    </div>
+  </template>
+
+  <template id="can_options">
+    <div class="options">
+      <label class="r">
+        <input type="radio" name="color_opt" value="laser" checked />
+        <div>
+          <img src="/images/enc_laser.png" alt="laser cut color_opt" />
+        </div>
+      </label>
+      <label class="r">
+        <input type="radio" name="color_opt" value="can" />
+        <div>
+          <img
+            src="/images/enc_can.png"
+            alt="enclosure from recycled steel can"
+          />
+        </div>
+      </label>
+      <label class="r">
+        <input type="radio" name="color_opt" value="tin" />
+        <div>
+          <img
+            src="/images/enc_tin.png"
+            alt="enclosure from recycled steel tin"
+          />
+        </div>
+      </label>
+    </div>
+  </template>
+
+  <template id="tin_options">
+    <div class="options">
+      <label class="r">
+        <input type="radio" name="color_opt" value="laser" checked />
+        <div>
+          <img src="/images/enc_laser.png" alt="laser cut color_opt" />
+        </div>
+      </label>
+      <label class="r">
+        <input type="radio" name="color_opt" value="can" />
+        <div>
+          <img
+            src="/images/enc_can.png"
+            alt="enclosure from recycled steel can"
+          />
+        </div>
+      </label>
+      <label class="r">
+        <input type="radio" name="color_opt" value="tin" />
+        <div>
+          <img
+            src="/images/enc_tin.png"
+            alt="enclosure from recycled steel tin"
+          />
+        </div>
+      </label>
+    </div>
+  </template>
+
+  <button type="submit">Send</button>
+</form>
