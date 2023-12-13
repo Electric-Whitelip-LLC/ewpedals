@@ -14,8 +14,6 @@ fetch("/webcomponents/ew_custom_order/ew_custom_order.html")
           template.innerHTML = text;
           shadow.appendChild(template.content.cloneNode(true));
 
-          console.log("sup");
-
           shadow.querySelectorAll("[type=radio]").forEach((r) => {
             r.addEventListener("change", (e) => {
               const options_placeholder = shadow.getElementById(
@@ -26,6 +24,10 @@ fetch("/webcomponents/ew_custom_order/ew_custom_order.html")
               const v = e.target.value;
               const t = shadow.getElementById(`${v}_options`);
               options_placeholder.appendChild(t.content.cloneNode(true));
+
+              const price = shadow.getElementById("price");
+
+              price.innerText = v === "laser" ? "$69.99" : "$49.99";
             });
           });
         }
