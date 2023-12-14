@@ -1,29 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EW Pedals</title>
 
-    <script type="module" src="/webcomponents/ew_custom_order/ew_custom_order.js"></script>
+    <script
+      type="module"
+      src="/webcomponents/ew_custom_order/ew_custom_order.js"
+    ></script>
     <script type="module" src="/webcomponents/ew_nav/ew_nav.js"></script>
     <script type="module" src="/webcomponents/ew_foot/ew_foot.js"></script>
-    <script src="https://kit.fontawesome.com/db132f905c.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/db132f905c.js"
+      crossorigin="anonymous"
+    ></script>
     <style>
       body {
         margin: 0;
-        font-family: 'Jost', sans-serif;
+        font-family: "Jost", sans-serif;
       }
     </style>
 
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jost:ital@0;1&family=Just+Another+Hand&family=Koulen&display=swap" rel="stylesheet"> 
-</head>
-<body>
-  <ew-nav></ew-nav>
-  <ew-custom-order></ew-custom-order>
-  <ew-foot></ew-foot>
-</body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:ital@0;1&family=Just+Another+Hand&family=Koulen&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <ew-nav></ew-nav>
+    <div style="display:flex; width: 100vw; justify-content: center;">
+      <img style="max-width: 90vw; border-radius: 12px; margin: 32px" src="/images/cosmic_collection.png" />
+    </div>
+    <ew-custom-order></ew-custom-order>
+    <ew-foot></ew-foot>
+  </body>
 </html>
