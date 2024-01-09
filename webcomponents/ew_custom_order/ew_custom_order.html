@@ -1,4 +1,9 @@
 <style>
+  .order_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   div {
     overflow: scroll;
   }
@@ -83,168 +88,181 @@
     border: 1px solid grey;
     margin: 16px;
     padding: 16px;
-    max-width: 615px;
+    width: 80vw;
   }
+  @media screen and (min-width: 630px) {
+    form {
+      width: 615px;
+    }
+  }
+
 </style>
-<p class="outer">
-  Each Electric Whitelip enclosure is custom-made based on available inventory. We
-  will contact you to confirm your selection & pricing before finalizing the
-  order.
-</p>
-<form action="https://formspree.io/f/mnqkekln" method="POST">
-  <label>
-    Your email:
-    <input type="email" name="email" />
-  </label>
-
-  <div class="enclosures">
-    <label class="r">
-      <h1>Acrylic</h1>
-      <input type="radio" name="enclosure" value="laser" />
-      <div>
-        <img src="/images/enc_laser.png" alt="laser cut enclosure" />
-      </div>
+<div class="order_container">
+  <p class="outer">
+    Each Electric Whitelip enclosure is custom-made based on available
+    inventory. We will contact you to confirm your selection & pricing before
+    finalizing the order.
+  </p>
+  <form action="https://formspree.io/f/mnqkekln" method="POST">
+    <label>
+      Your email:
+      <input type="email" name="email" />
     </label>
-    <label class="r">
-      <h1>Can</h1>
-      <input type="radio" name="enclosure" value="can" />
-      <div>
-        <img
-          src="/images/enc_can.png"
-          alt="enclosure from recycled steel can"
-        />
-      </div>
-    </label>
-    <label class="r">
-      <h1>Tin</h1>
-      <input type="radio" name="enclosure" value="tin" />
-      <div>
-        <img
-          src="/images/enc_tin.png"
-          alt="enclosure from recycled steel tin"
-        />
-      </div>
-    </label>
-  </div>
 
-  <div id="options_placeholder"></div>
-
-  <template id="tin_options">
-    
-    <div class="col_options">
+    <div class="enclosures">
       <label class="r">
-        <h1></h1>
-        <input type="radio" name="color_opt" value="purp_glitter" />
-        <div class="mini">
-          <img src="/images/purp_glitter.webp" alt="purple glitter" />
-        </div>
-      </label>
-    </div>
-  </template>
-  <template id="laser_options">
-    <div class="col_options">
-      <label class="r">
-        <h1>Purple Glitter</h1>
-        <input type="radio" name="color_opt" value="purp_glitter" />
-        <div class="mini">
-          <img src="/images/purp_glitter.webp" alt="purple glitter" />
+        <h1>Acrylic</h1>
+        <input type="radio" name="enclosure" value="laser" />
+        <div>
+          <img src="/images/enc_laser.png" alt="laser cut enclosure" />
         </div>
       </label>
       <label class="r">
-        <h1>Clear Purple</h1>
-        <input type="radio" name="color_opt" value="purp_trans" />
-        <div class="mini">
-          <img src="/images/purp_trans.avif" alt="Translucent purple" />
-        </div>
-      </label>
-      <label class="r">
-        <h1>Pearl</h1>
-        <input type="radio" name="color_opt" value="pearl" />
-        <div class="mini">
-          <img src="/images/pearl.avif" alt="Pearl" />
-        </div>
-      </label>
-      <label class="r">
-        <h1>Haxor</h1>
-        <input type="radio" name="color_opt" value="haxor" />
-        <div class="mini">
-          <img src="/images/haxor.avif" alt="Haxor (flourescent green)" />
-        </div>
-      </label>
-      <label class="r">
-        <h1>Smoke</h1>
-        <input type="radio" name="color_opt" value="smoke" />
-        <div class="mini">
-          <img src="/images/smoke_trans.avif" alt="Smoke (transparent black)" />
-        </div>
-      </label>
-      <label class="r">
-        <h1>Ice Cream</h1>
-        <input type="radio" name="color_opt" value="smoke" />
-        <div class="mini">
-          <img src="/images/white_trans.webp" alt="Ice cream (frosty white)" />
-        </div>
-      </label>
-    </div>
-  </template>
-
-  <template id="can_options">
-    <div class="col_options">
-      <label class="r">
-        <h1>Cosmic Deep</h1>
-        <input type="radio" name="color_opt" value="cos_deep" />
-        <div class="mini">
+        <h1>Can</h1>
+        <input type="radio" name="enclosure" value="can" />
+        <div>
           <img
-            src="/images/can_cos_deep.png"
-            alt="cosmic deep (glittering purple)"
+            src="/images/enc_can.png"
+            alt="enclosure from recycled steel can"
           />
         </div>
       </label>
       <label class="r">
-        <h1>Cosmic Sea</h1>
-        <input type="radio" name="color_opt" value="cos_sea" />
-        <div class="mini">
+        <h1>Tin</h1>
+        <input type="radio" name="enclosure" value="tin" />
+        <div>
           <img
-            src="/images/can_cos_blue.png"
-            alt="cosmic sea (gliterring blue)"
+            src="/images/enc_tin.png"
+            alt="enclosure from recycled steel tin"
           />
-        </div>
-      </label>
-      <label class="r">
-        <h1>Cosmic Crab</h1>
-        <input type="radio" name="color_opt" value="can_cos_crab" />
-        <div class="mini">
-          <img
-            src="/images/can_cos_crab.png"
-            alt="cosmic crab (layered glittering red)"
-          />
-        </div>
-      </label>
-      <label class="r">
-        <h1>Clean Purple</h1>
-        <input type="radio" name="color_opt" value="can_purp" />
-        <div class="mini">
-          <img src="/images/can_purp.png" alt="clean purple" />
-        </div>
-      </label>
-      <label class="r">
-        <h1>Clean Yellow</h1>
-        <input type="radio" name="color_opt" value="can_yellow" />
-        <div class="mini">
-          <img src="/images/can_yellow.png" alt="clean yellow" />
-        </div>
-      </label>
-      <label class="r">
-        <h1>Clean White</h1>
-        <input type="radio" name="color_opt" value="can_white" />
-        <div class="mini">
-          <img src="/images/can_white.png" alt="clean white" />
         </div>
       </label>
     </div>
-  </template>
-  <div>
-    <button type="submit">Send</button>
-    <p>Estimated cost: <span id="price">--</span></p>
-  </div>
-</form>
+
+    <div id="options_placeholder"></div>
+
+    <template id="tin_options">
+      <div class="col_options">
+        <label class="r">
+          <h1></h1>
+          <input type="radio" name="color_opt" value="purp_glitter" />
+          <div class="mini">
+            <img src="/images/purp_glitter.webp" alt="purple glitter" />
+          </div>
+        </label>
+      </div>
+    </template>
+    <template id="laser_options">
+      <div class="col_options">
+        <label class="r">
+          <h1>Purple Glitter</h1>
+          <input type="radio" name="color_opt" value="purp_glitter" />
+          <div class="mini">
+            <img src="/images/purp_glitter.webp" alt="purple glitter" />
+          </div>
+        </label>
+        <label class="r">
+          <h1>Clear Purple</h1>
+          <input type="radio" name="color_opt" value="purp_trans" />
+          <div class="mini">
+            <img src="/images/purp_trans.avif" alt="Translucent purple" />
+          </div>
+        </label>
+        <label class="r">
+          <h1>Pearl</h1>
+          <input type="radio" name="color_opt" value="pearl" />
+          <div class="mini">
+            <img src="/images/pearl.avif" alt="Pearl" />
+          </div>
+        </label>
+        <label class="r">
+          <h1>Haxor</h1>
+          <input type="radio" name="color_opt" value="haxor" />
+          <div class="mini">
+            <img src="/images/haxor.avif" alt="Haxor (flourescent green)" />
+          </div>
+        </label>
+        <label class="r">
+          <h1>Smoke</h1>
+          <input type="radio" name="color_opt" value="smoke" />
+          <div class="mini">
+            <img
+              src="/images/smoke_trans.avif"
+              alt="Smoke (transparent black)"
+            />
+          </div>
+        </label>
+        <label class="r">
+          <h1>Ice Cream</h1>
+          <input type="radio" name="color_opt" value="smoke" />
+          <div class="mini">
+            <img
+              src="/images/white_trans.webp"
+              alt="Ice cream (frosty white)"
+            />
+          </div>
+        </label>
+      </div>
+    </template>
+
+    <template id="can_options">
+      <div class="col_options">
+        <label class="r">
+          <h1>Cosmic Deep</h1>
+          <input type="radio" name="color_opt" value="cos_deep" />
+          <div class="mini">
+            <img
+              src="/images/can_cos_deep.png"
+              alt="cosmic deep (glittering purple)"
+            />
+          </div>
+        </label>
+        <label class="r">
+          <h1>Cosmic Sea</h1>
+          <input type="radio" name="color_opt" value="cos_sea" />
+          <div class="mini">
+            <img
+              src="/images/can_cos_blue.png"
+              alt="cosmic sea (gliterring blue)"
+            />
+          </div>
+        </label>
+        <label class="r">
+          <h1>Cosmic Crab</h1>
+          <input type="radio" name="color_opt" value="can_cos_crab" />
+          <div class="mini">
+            <img
+              src="/images/can_cos_crab.png"
+              alt="cosmic crab (layered glittering red)"
+            />
+          </div>
+        </label>
+        <label class="r">
+          <h1>Clean Purple</h1>
+          <input type="radio" name="color_opt" value="can_purp" />
+          <div class="mini">
+            <img src="/images/can_purp.png" alt="clean purple" />
+          </div>
+        </label>
+        <label class="r">
+          <h1>Clean Yellow</h1>
+          <input type="radio" name="color_opt" value="can_yellow" />
+          <div class="mini">
+            <img src="/images/can_yellow.png" alt="clean yellow" />
+          </div>
+        </label>
+        <label class="r">
+          <h1>Clean White</h1>
+          <input type="radio" name="color_opt" value="can_white" />
+          <div class="mini">
+            <img src="/images/can_white.png" alt="clean white" />
+          </div>
+        </label>
+      </div>
+    </template>
+    <div>
+      <button type="submit">Send</button>
+      <p>Estimated cost: <span id="price">--</span></p>
+    </div>
+  </form>
+</div>
