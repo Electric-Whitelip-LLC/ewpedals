@@ -2,12 +2,21 @@
   .legal {
     width: 100vw;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     background-color: black;
     color: white;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    align-items: center;
+    padding: 10px;
+    line-height: 32px;
   }
+  @media screen and (min-width: 600px) {
+    .legal {
+      flex-direction: row;
+      justify-content: space-around;
+      padding: 24px;
+    }
+  }
+
   .legal a {
     color: skyblue;
   }
